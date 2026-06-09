@@ -2,6 +2,8 @@
 
 Интерактивная страница для обмена фотографиями. Реализована возможность добавлять и удалять карточки, ставить лайки, редактировать профиль и аватар, просматривать статистику пользователей.
 
+**Опубликованный проект:** [https://tostchinsanaa-ai.github.io/mesto-production/](https://tostchinsanaa-ai.github.io/mesto-production/)
+
 ## Технологии
 - HTML5, CSS3, JavaScript (ES6)
 - Валидация форм на стороне клиента
@@ -29,3 +31,21 @@
 1. Клонировать репозиторий:
    ```bash
    git clone https://github.com/tostchinsanaa-ai/mesto-ad1.git
+2.Перейти в папку проекта:
+cd mesto-ad1
+
+3.Установить зависимости:
+npm install
+
+4.Запустить локальный сервер разработки:
+npm run dev
+
+5.Собрать проект:
+npm run build
+
+## Деплой
+Автоматический деплой настроен через GitHub Actions. При каждом push в ветку `main` приватного репозитория проект собирается и выкладывается в публичный репозиторий [`mesto-production`](https://github.com/tostchinsanaa-ai/mesto-production).
+
+**Ссылка на работающий сайт:** [https://tostchinsanaa-ai.github.io/mesto-production/](https://tostchinsanaa-ai.github.io/mesto-production/)
+
+
