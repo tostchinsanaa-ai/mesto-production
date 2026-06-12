@@ -16,7 +16,7 @@
       <header class="header page__section">
         <img
           src="./assets/logo-C_QQpFK1.svg"
-          alt="Логотип проекта место"
+          alt="Логотип проекта Место"
           class="logo header__logo"
         />
       </header>
@@ -55,11 +55,14 @@
                 maxlength="40"
                 pattern="^[A-Za-zА-Яа-яЁё\s\-]+$"
                 required
-                data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы"
+                data-error-message-required="Это поле обязательно"
+                data-error-message-too-short="Минимальная длина — 2 символа"
+                data-error-message-too-long="Максимальная длина — 40 символов"
+                data-error-message-pattern="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы"
               />
-            <span class="popup__error" id="user-name-error"></span>
+              <span class="popup__error" id="user-name-error"></span>
             </label>
-            
+
             <label class="popup__label">
               <input
                 type="text"
@@ -70,10 +73,13 @@
                 minlength="2"
                 maxlength="200"
                 required
+                data-error-message-required="Это поле обязательно"
+                data-error-message-too-short="Минимальная длина — 2 символа"
+                data-error-message-too-long="Максимальная длина — 200 символов"
               />
               <span class="popup__error" id="user-description-error"></span>
             </label>
-            
+
             <button
               type="submit"
               class="button popup__button popup__button_disabled"
@@ -102,11 +108,14 @@
                 maxlength="30"
                 pattern="^[A-Za-zА-Яа-яЁё\s\-]+$"
                 required
-                data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы"
+                data-error-message-required="Это поле обязательно"
+                data-error-message-too-short="Минимальная длина — 2 символа"
+                data-error-message-too-long="Максимальная длина — 30 символов"
+                data-error-message-pattern="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы"
               />
               <span class="popup__error" id="place-name-error"></span>
             </label>
-          
+
             <label class="popup__label">
               <input
                 type="url"
@@ -115,10 +124,12 @@
                 class="popup__input popup__input_type_url"
                 placeholder="Ссылка на картинку"
                 required
+                data-error-message-required="Это поле обязательно"
+                data-error-message-type-mismatch="Введите корректный URL (например, https://...)"
               />
               <span class="popup__error" id="place-link-error"></span>
             </label>
-            
+
             <button
               type="submit"
               class="button popup__button popup__button_disabled"
@@ -153,10 +164,12 @@
                 class="popup__input popup__input_type_avatar"
                 placeholder="Ссылка на изображение"
                 required
+                data-error-message-required="Это поле обязательно"
+                data-error-message-type-mismatch="Введите корректный URL (например, https://...)"
               />
               <span class="popup__error" id="user-avatar-error"></span>
             </label>
-            
+
             <button
               type="submit"
               class="button popup__button popup__button_disabled"
@@ -167,7 +180,8 @@
           </form>
         </div>
       </div>
-            <!-- Модальное окно подтверждения удаления -->
+
+      <!-- Модальное окно подтверждения удаления -->
       <div class="popup popup_type_remove-card">
         <div class="popup__content">
           <button type="button" class="popup__close"></button>
@@ -178,7 +192,7 @@
         </div>
       </div>
 
-      <!-- Нэмэлт: Модальное окно статистики пользователей -->
+      <!-- Модальное окно статистики пользователей -->
       <div class="popup popup_type_info">
         <div class="popup__content popup__content_content_info">
           <button type="button" class="popup__close"></button>
@@ -188,19 +202,6 @@
           <ul class="popup__list"></ul>
         </div>
       </div>
-
-      <!-- (Опционально) Модальное окно подтверждения удаления – закомментировано до востребования -->
-      <!--
-      <div class="popup popup_type_remove-card">
-        <div class="popup__content">
-          <button type="button" class="popup__close"></button>
-          <h3 class="popup__title">Вы уверены?</h3>
-          <form class="popup__form" name="remove-card" novalidate>
-            <button type="submit" class="button popup__button popup__button_disabled" disabled>Да</button>
-          </form>
-        </div>
-      </div>
-      -->
     </div>
 
 
@@ -221,7 +222,7 @@
       </li>
     </template>
 
-    <!-- Шаблон для статистик мэдээлэл (Жишээ нь: "Всего карточек: 30") -->
+    <!-- Шаблон для статистик мэдээлэл -->
     <template id="popup-info-definition-template">
       <div class="popup__info-item">
         <dt class="popup__info-term"></dt>
@@ -229,7 +230,7 @@
       </div>
     </template>
 
-    <!-- Шаблон для хэрэглэгчийн жагсаалтын элемент (Жишээ нь: "Жак-Ив Кусто (17 карт)") -->
+    <!-- Шаблон для хэрэглэгчийн жагсаалт -->
     <template id="popup-info-user-preview-template">
       <li class="popup__list-item popup__list-item_type_badge"></li>
     </template>
